@@ -1,0 +1,24 @@
+:root {
+    --main-color: #0083a3;
+    --black: #202020;
+    --black-50: #777;
+    --white: #fff;
+    --trans: 0.3s;
+}
+
+/* Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import Cairo Font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    text-transform: capitalize;
+    height: 100%;
+}
+/*!======================================================================*/
