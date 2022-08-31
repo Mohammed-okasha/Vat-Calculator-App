@@ -10,6 +10,40 @@
 </head>
 <body>
     <!--!==================================================================-->
+    <div class="main-wrapper">
+        <div class="vatCalc-box">
+            <!-- Heading -->
+            <h2 class="heading">vat calculator</h2>
+
+            <!-- Vat Calc Form ----------->
+            <form action="" id="vatCalc_form">
+                <!-- Form Box 1 -->
+                <div class="form-box">
+                    <label for="net_price">net price</label>
+                    <input type="text" name="net-price"
+                    placeholder="0.00" id="net_price">
+                </div>
+                <!-- Form Box 2 -->
+                <div class="form-box">
+                    <label for="vat_rate"><span>vat</span> rate(&percnt;)</label>
+                    <input type="text" name="vat-rate"
+                    placeholder="0.00" id="vat_rate">
+                </div>
+                <!-- Form Box 3 -->
+                <div class="form-box">
+                    <label for="vatInclusive_price"><span>vat</span> inclusive price</label>
+                    <input type="text" name="vatInclusive-price"
+                    placeholder="0.00" id="vatInclusive_price" disabled>
+                </div>
+
+                <!-- Action btns ------->
+                <div class="action-btns">
+                    <button class="btn" id="calculate" type="submit">calculate</button>
+                    <button class="btn" id="reset" type="button">reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- JS App File -->
     <script src="app.js"></script>
 </body>

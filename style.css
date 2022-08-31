@@ -1,5 +1,5 @@
 :root {
-    --main-color: #0083a3;
+    --main-color:  #0093b7;
     --black: #202020;
     --black-50: #777;
     --white: #fff;
@@ -22,3 +22,96 @@ body {
     height: 100%;
 }
 /*!======================================================================*/
+.main-wrapper {
+    position: relative;
+    height: 100vh; width: 100%;
+    inset: 0;
+    padding: 15px;
+}
+
+.main-wrapper .vatCalc-box {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px; padding: 2rem 15px;
+    background-color: var(--main-color);
+    color: var(--white);
+    border-radius: 3px;
+    filter: drop-shadow(2px 2px 3px rgb(0, 0, 0, 0.3));
+}
+
+.main-wrapper .vatCalc-box .heading {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.main-wrapper .vatCalc-box .form-box {
+    margin-bottom: 1rem;
+}
+
+.main-wrapper .vatCalc-box .form-box label {
+    display: inline-block;
+    padding-bottom: 6px;
+    letter-spacing: .5px;
+    font-size: 15px;
+}
+.main-wrapper .vatCalc-box .form-box label span {
+    text-transform: uppercase;
+}
+
+.main-wrapper .vatCalc-box .form-box input[type="text"] {
+    width: 100%; height: 30px;
+    padding: 0 10px; border: none;
+    border-radius: 3px;
+    caret-color: var(--main-color);
+}
+
+.main-wrapper .vatCalc-box .form-box:nth-of-type(1) input[type="text"].error,
+.main-wrapper .vatCalc-box .form-box:nth-of-type(2) input[type="text"].error {
+    border: 2px solid #ff4545;
+}
+
+.main-wrapper .vatCalc-box .form-box input[type="text"]:focus {outline: none;}
+
+.main-wrapper .vatCalc-box .form-box:nth-of-type(3) input[type="text"] {
+    background-color: #333;
+    color: var(--white);
+}
+.main-wrapper .vatCalc-box .form-box:nth-of-type(3) input[type="text"]::placeholder {
+    color: var(--white);
+}
+
+.main-wrapper .vatCalc-box .action-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin-top: 1.25rem;
+}
+
+.main-wrapper .vatCalc-box .action-btns .btn {
+    width: 150px; height: 35px;
+    text-transform: capitalize;
+    font-size: 17px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.main-wrapper .vatCalc-box .action-btns .btn:first-child {
+    background-color: var(--white);
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.main-wrapper .vatCalc-box .action-btns .btn:last-child {
+    background-color: #ff4545;
+    color: var(--white);
+}
+
+
+@media (max-width: 500px) {
+    .main-wrapper .vatCalc-box {
+        width: calc(100% - 30px);
+    }
+}
